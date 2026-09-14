@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+
+/*
+ * =============================================================================
+ * Coco Beauty Bar — Design Tokens
+ * =============================================================================
+ * Tailwind CSS 4 uses CSS-first configuration via @theme.
+ * These tokens will be refined once brand research is complete.
+ * =============================================================================
+ */
+
+@theme {
+  /* Brand Colors — placeholder palette, to be refined from Instagram branding */
+  --color-brand-50: #faf7f5;
+  --color-brand-100: #f2ece7;
+  --color-brand-200: #e5d9cf;
+  --color-brand-300: #d4c0ae;
+  --color-brand-400: #c4a78e;
+  --color-brand-500: #b08d6e;
+  --color-brand-600: #9a7558;
+  --color-brand-700: #7d5e47;
+  --color-brand-800: #664c3b;
+  --color-brand-900: #4d3a2e;
+  --color-brand-950: #2d2119;
+
+  /* Neutral tones */
+  --color-surface: #faf9f7;
+  --color-surface-elevated: #ffffff;
+  --color-ink: #1a1a1a;
+  --color-ink-muted: #6b6b6b;
+  --color-ink-subtle: #9a9a9a;
+  --color-border: #e8e5e1;
+  --color-border-strong: #d1cdc7;
+
+  /* Accent — used sparingly for CTAs and highlights */
+  --color-accent: #c8a97e;
+  --color-accent-hover: #b8955e;
+
+  /* Typography scale */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+
+  /* Spacing rhythm */
+  --spacing-section: 5rem;
+  --spacing-section-mobile: 3rem;
+}
+
+/*
+ * Base styles
+ */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: var(--color-surface);
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
