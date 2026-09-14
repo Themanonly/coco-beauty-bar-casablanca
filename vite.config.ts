@@ -7,15 +7,4 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'router': ['react-router'],
-          'motion': ['framer-motion'],
-        },
-      },
-    },
-  },
 });
