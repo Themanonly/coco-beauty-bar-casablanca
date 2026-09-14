@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://coco-beauty-bar-casablanca.netlify.app/sitemap.xml
